@@ -2,7 +2,7 @@ import express, { Request, Response } from 'express'
 // import { renderToString } from 'react-dom/server';
 // import { renderToNodeStream } from 'react-dom/server'
 // import { StaticRouter } from 'react-router-dom';
-
+const port = process.env.port || 3000
 const app = express()
 
 app.use(express.static('build'))
@@ -28,6 +28,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send(html)
 })
 
-app.listen(3000)
+app.listen(port)
 
 export default app
