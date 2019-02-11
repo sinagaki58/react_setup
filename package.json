@@ -10,7 +10,7 @@
     "watch": "webpack --watch --mode=development --config webpack.config.babel.js",
     "dev": "concurrently \"npm run watch\" \"npm run start\"",
     "test": "jest --coverage",
-    "clean": "rm -rf ./node_modules ./build ./package-lock.json"
+    "clean": "rm -rf ./node_modules ./build ./yarn.lock"
   },
   "dependencies": {
     "@types/express": "^4.16.1",
