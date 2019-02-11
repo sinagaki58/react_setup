@@ -3,21 +3,17 @@ export interface ActionTypeInterface<T> {
   payload: T
 }
 
-enum ActionTypes {
+export enum ActionTypes {
   INCREMENT = 'main/increment',
   DECREMENT = 'main/decrement'
 }
 
-export const incrementAmount = (
-  payload: number
-): ActionTypeInterface<number> => ({
+export const increment = (payload: number): ActionTypeInterface<number> => ({
   type: ActionTypes.INCREMENT,
   payload
 })
 
-export const decrementAmount = (
-  payload: number
-): ActionTypeInterface<number> => ({
+export const decrement = (payload: number): ActionTypeInterface<number> => ({
   type: ActionTypes.DECREMENT,
   payload
 })

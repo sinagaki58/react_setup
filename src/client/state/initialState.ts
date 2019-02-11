@@ -1,7 +1,11 @@
 export interface StateInterface {
-  title: string
+  main: {
+    title: string
+  }
 }
 
 export const initialState: StateInterface = {
-  title: 'Hello, World'
+  main: {
+    title: 'Hello, World.'
+  }
 }

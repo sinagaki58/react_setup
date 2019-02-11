@@ -1,7 +1,17 @@
-import { applyMiddleware, combineReducers, createStore } from 'redux'
+import {
+  AnyAction,
+  applyMiddleware,
+  combineReducers,
+  createStore,
+  Reducer
+} from 'redux'
+import { StateInterface } from './initialState'
 import main from './reducers'
 
-const rootReducer = combineReducers({
+const rootReducer: Reducer<
+  { main: StateInterface },
+  AnyAction
+> = combineReducers({
   main
 })
 

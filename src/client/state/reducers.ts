@@ -1,17 +1,20 @@
+import { ActionTypeInterface, ActionTypes } from './actions'
 import { initialState, StateInterface } from './initialState'
 
-export interface ActionInterface<T> {
-  type: string
-  payload: T
-  error: Error
-}
-
-export default (
-  state = initialState,
-  action: ActionInterface<StateInterface>
+const reducer = (
+  state: StateInterface = initialState,
+  action: ActionTypeInterface<any>
 ): StateInterface => {
   switch (action.type) {
+    case ActionTypes.INCREMENT:
+      return state
+
+    case ActionTypes.DECREMENT:
+      return state
+
     default:
       return state
   }
 }
+
+export default reducer
