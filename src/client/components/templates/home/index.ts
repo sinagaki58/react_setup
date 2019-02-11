@@ -1,10 +1,11 @@
 import { decrement, increment } from '@src/client/state/actions'
+import { StateInterface } from '@src/client/state/initialState'
 import { connect } from 'react-redux'
 import { Dispatch } from 'redux'
 import Home from './component'
 
-const mapStateToProps = ({ main }: any) => ({
-  ...main
+const mapStateToProps = (state: StateInterface) => ({
+  title: state.title
 })
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({

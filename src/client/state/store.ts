@@ -1,20 +1,6 @@
-import {
-  AnyAction,
-  applyMiddleware,
-  combineReducers,
-  createStore,
-  Reducer
-} from 'redux'
-import { StateInterface } from './initialState'
-import main from './reducers'
-
-const rootReducer: Reducer<
-  { main: StateInterface },
-  AnyAction
-> = combineReducers({
-  main
-})
+import { applyMiddleware, createStore } from 'redux'
+import reducer from './reducers'
 
 const middlewares: any[] = []
 
-export default createStore(rootReducer, applyMiddleware(...middlewares))
+export default createStore(reducer, applyMiddleware(...middlewares))
