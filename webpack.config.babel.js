@@ -1,7 +1,7 @@
 import path from 'path'
 
 export default {
-  entry: path.resolve(__dirname, 'src/client/index.tsx'),
+  entry: path.resolve(__dirname, 'src/client/client.tsx'),
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
