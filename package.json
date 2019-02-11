@@ -1,0 +1,49 @@
+{
+  "name": "react_setup",
+  "version": "1.0.0",
+  "main": "./src/server/index.ts",
+  "author": "sinagaki58",
+  "license": "ISC",
+  "scripts": {
+    "start": "nodemon",
+    "build": "webpack --mode=development --config webpack.config.babel.js",
+    "watch": "webpack --watch --mode=development --config webpack.config.babel.js",
+    "dev": "concurrently \"npm run watch\" \"npm run start\"",
+    "test": "jest --coverage",
+    "clean": "rm -rf ./node_modules ./build ./package-lock.json"
+  },
+  "dependencies": {
+    "@types/express": "^4.16.1",
+    "@types/react": "^16.8.2",
+    "@types/react-dom": "^16.8.0",
+    "express": "^4.16.4",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-redux": "^6.0.0",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^10.12.24",
+    "@types/react-redux": "^7.0.1",
+    "@types/react-router-dom": "^4.3.1",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "jest": "^24.1.0",
+    "nodemon": "^1.18.10",
+    "prettier": "^1.16.4",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.3.3",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3"
+  }
+}

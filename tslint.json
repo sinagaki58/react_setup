@@ -1,0 +1,23 @@
+{
+    "defaultSeverity": "error",
+    "extends": ["tslint:recommended", "tslint-config-prettier", "tslint-plugin-prettier"],
+    "jsRules": {
+        "object-literal-sort-keys": false
+    },
+    "rules": {
+        "prettier": [true, ".prettierrc"],
+        "interface-name": false,
+        "member-ordering": false,
+        "no-console": {
+            "severity": "warning"
+        },
+        "no-empty": [true, "allow-empty-functions"],
+        "no-empty-interface": false,
+        "no-var-requires": {
+            "severity": "warning"
+        },
+        "object-literal-shorthand": false,
+        "object-literal-sort-keys": false
+    },
+    "rulesDirectory": []
+}
